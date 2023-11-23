@@ -1,0 +1,14 @@
+{% extends "register/base.html" %}
+
+{% block title %}
+login
+{% endblock %}
+
+{% block content %}
+<form method="post" action="" class="form-group">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-success">login</button>
+    <p>Don't have an account? <a href="/register" class="">Create new account.</a></p>
+</form>
+{% endblock %}
